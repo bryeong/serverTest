@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko"
+      xmlns:th="http://www.thymeleaf.org"
+>
+<head>
+    <meta charset="UTF-8">
+    <title>유저 사용 페이지</title>
+</head>
+<body>
+    <h1>유저 사용 페이지</h1>
+    <label for="filterCityName"></label>
+    <select id="filterCityName">
+        <option>시/군/구명</option>
+    </select>
+    <label for="delivery"></label>
+    <select id="delivery">
+        <option>배달가능여부</option>
+        <option>Y</option>
+        <option>N</option>
+    </select>
+    <button type="submit">조회</button>
+
+    <table border="1">
+        <thead>
+            <tr>
+                <th>순번</th>
+                <th>프랜차이즈명</th>
+                <th>가맹점명</th>
+                <th>전화번호</th>
+                <th>도로명주소</th>
+                <th>평일운영시작시간</th>
+                <th>토요일 운영 시간</th>
+                <th>배달가능여부</th>
+                <th>좋아요하기</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="data, stat : ${dataList}">
+                <td th:text="${stat.count}">1</td>
+                <td th:text="${data.get('프랜차이즈명')}">oo김밥</td>
+                <td th:text="${data.get('가맹점명')}">00점</td>
+                <td th:text="${data.get('전화번호')}">000-0000-0000</td>
+                <td th:text="${data.get('소재지지번주소')}">달구벌대로00길</td>
+                <td th:text="${data.get('평일운영시작시각')}">11:00</td>
+                <td th:text="${data.get('토요일운영시작시각')}">11:00</td>
+                <td th:text="${data.get('배달가능여부')}">Y</td>
+                <td><button style=" text-decoration: underline; cursor: pointer" >좋아요</button></td>
+            </tr>
+
+        </tbody>
+    </table>
+
+</body>
+</html>

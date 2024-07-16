@@ -1,0 +1,6 @@
+### GET request to example server
+GET https://api.odcloud.kr/api/15109950/v1/uddi:1f78fe49-78b4-4784-a5f0-e2c8a60515b4
+    ?page=1&perPage=10&
+    serviceKey=KqLmrlmEONYZm42q3v7vmV4mCnsybFcDbG3OVzGcCBHC1u1g7iCHCweZWZWyj%2B44YQMrgUURFAqC9lZFg%2BqAIA%3D%3D
+
+###
